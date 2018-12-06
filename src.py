@@ -4,7 +4,7 @@ import re
 import time
 import random
 
-# A Reddit bot based on Skeleseer from The Last of Us.  Designed by /u/generic_panda as a HackUMass VI project.
+# A Reddit bot based on Skeleseer from The Last of Us.  Designed by /u/XXXXXXX as a HackUMass VI project.
 
 
 # List to contain possible skeleseer answers
@@ -45,7 +45,7 @@ def authenticate():
                          client_secret='XXXXXXXX',
                          password='XXXXXXXX',
                          user_agent='<terminal:generic_panda_bot:0.0.1 (by: /u/generic_panda)>',
-                         username='generic_panda_bot')
+                         username='XXXXXX_bot')
     botname = str(reddit.user.me())
     print('successfully authenticated: ' + botname)
     return reddit
@@ -91,8 +91,8 @@ def post_reply(comment):
 
 # Checks for new comments and then responds appropriately
 def run_gpb(reddit):
-    print('Generic_panda_bot is currently running...')
-    for comment in reddit.subreddit('GenericPandaTest').stream.comments():
+    print('XXXXXX_bot is currently running...')
+    for comment in reddit.subreddit('Test').stream.comments():
         if comment.id not in replied_to:
             text = comment.body
             if summon_skeleseer(text):
